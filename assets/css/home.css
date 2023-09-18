@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+}
+
+ul{
+    padding: 0;
+}
+
+.contacts{
+    height: 40px;
+    display: flex;
+    width: 500px;
+    background-color: rgb(139, 125, 215);
+    margin: auto;
+    margin-bottom: 2px;
+    justify-content: space-between;
+    align-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: all 0.5s;
+}
+.contacts:hover{
+    background-color: gray;
+    height: 45px;
+    font-size: 20px;
+}
+.contact-name-div{
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+.contact-name{
+    margin: 0;
+    padding: 0 5px;
+}
+.delete{
+    display: flex;
+}
+.delete a{
+    display: flex;
+}
+.delete-icon{
+    padding: 5px;
+    margin: auto 5px;
+    font-size: 20px;
+    color: white;
+    border: 2px solid rgb(184, 0, 0);
+    color: red;
+    border-radius: 5px;
+    background-color: white;
+}
+.contact-phone{
+    margin: auto 0;
+    padding: 0px 5px;
+}
+#form{
+    height: 30px;
+    /* background-color: cyan; */
+    width: 500px;
+    margin: auto;
+    display: flex;
+
+}
+#form input{
+    width: 210px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 2px;
+    outline: none;
+    font-size: 15px;
+}
+#form button{
+    width: 80px;
+    background-color: gray;
+    color: white;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    margin: 1px;
+    border: 2px solid black;
+}

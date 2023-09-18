@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=  locals.title %>
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <h1 id="page-heading">
+        <i class="fas fa-address-book"></i>
+        My Contact List
+    </h1>
+
+    <div>
+        <ul>
+            <% for (let i of contact_list){  %>
+                <li class="contacts">
+                    <div class="contact-name-div">
+                        <i class="fas fa-regular fa-user"></i>
+                        <p class="contact-name"><%= i.name %></p>
+                    </div>
+                    <div class="delete">
+                        <p class="contact-phone"><%= i.phone %></p>
+                        <!-- <a href="/delete-contact/<%= i.phone %>"> -->
+                        <!-- <a href="/delete-contact/?phone= <%=i.phone %>&name=<%=i.name %>"> -->
+                        <!-- <a href="/delete-contact/?phone= <%=i.phone %>"> -->
+                        <a href="/delete-contact/?id= <%=i._id %>">
+                        
+                            <i class="delete-icon fa-solid fa-trash-can-arrow-up"></i>
+                        </a>
+                    </div>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+
+    <form action="/create-contact" method="POST" id="form">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="number" name="phone" placeholder="Phone" required>
+        <button type="submit">Add</button>
+    </form>
+
+
+    <script type="text/javascript" src="/js/home.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- List of common error
+        Library inclusion
+        Syntax
+-->
